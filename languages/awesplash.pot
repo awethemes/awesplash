@@ -1,0 +1,540 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-03 16:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: awesplash.php:173
+msgid "You need to reload the page to show splash page. Press OK to reload."
+msgstr ""
+
+#: awesplash.php:174
+msgid ""
+"You need to reload the page to turn off splash page. Press OK to reload."
+msgstr ""
+
+#: awesplash.php:190
+msgctxt "Montserrat font"
+msgid "on"
+msgstr ""
+
+#: includes/class-awesplash-handle.php:37 includes/customizer-functions.php:139
+msgid "Sorry, you may not view this site."
+msgstr ""
+
+#: includes/class-awesplash-handle.php:43
+msgid "You aren't agree with conditions."
+msgstr ""
+
+#: includes/class-awesplash-handle.php:47
+msgid "Sorry, security key is invalid."
+msgstr ""
+
+#: includes/customizer-functions.php:26
+msgid "General"
+msgstr ""
+
+#: includes/customizer-functions.php:30
+msgid "Enable AweSplash page"
+msgstr ""
+
+#: includes/customizer-functions.php:35
+msgid "Checked to turn on/off splash mode."
+msgstr ""
+
+#: includes/customizer-functions.php:39
+msgid "Display options"
+msgstr ""
+
+#: includes/customizer-functions.php:51
+msgid "Set expire days"
+msgstr ""
+
+#: includes/customizer-functions.php:54
+msgid ""
+"Days until it shown again. If 0 is selected, Splash Page will be displayed "
+"once per session."
+msgstr ""
+
+#: includes/customizer-functions.php:62
+msgid "Opt-In validation"
+msgstr ""
+
+#: includes/customizer-functions.php:67
+msgid "Enable Opt-In"
+msgstr ""
+
+#: includes/customizer-functions.php:80 includes/customizer-functions.php:124
+msgid "Opt-In text"
+msgstr ""
+
+#: includes/customizer-functions.php:81 includes/template-tags.php:162
+msgid "I agree with the terms and conditions."
+msgstr ""
+
+#: includes/customizer-functions.php:93
+msgid "Opt-In warning"
+msgstr ""
+
+#: includes/customizer-functions.php:94
+msgid "You aren't agree with conditions"
+msgstr ""
+
+#: includes/customizer-functions.php:106
+msgid "Age validation"
+msgstr ""
+
+#: includes/customizer-functions.php:111
+msgid "Enable age validation"
+msgstr ""
+
+#: includes/customizer-functions.php:125 includes/template-tags.php:185
+msgid "Enter your Age"
+msgstr ""
+
+#: includes/customizer-functions.php:131
+msgid "Minimun Age Required"
+msgstr ""
+
+#: includes/customizer-functions.php:138
+msgid "Awe warning"
+msgstr ""
+
+#: includes/customizer-functions.php:150
+msgid "Heading"
+msgstr ""
+
+#: includes/customizer-functions.php:155
+msgid "Heading text"
+msgstr ""
+
+#: includes/customizer-functions.php:156 includes/template-tags.php:53
+msgid "We are"
+msgstr ""
+
+#: includes/customizer-functions.php:168
+msgid "Effect style"
+msgstr ""
+
+#: includes/customizer-functions.php:170
+msgid "Standard"
+msgstr ""
+
+#: includes/customizer-functions.php:171
+msgid "Type Letters"
+msgstr ""
+
+#: includes/customizer-functions.php:172
+msgid "Zoom Out"
+msgstr ""
+
+#: includes/customizer-functions.php:173
+msgid "Push Out"
+msgstr ""
+
+#: includes/customizer-functions.php:183
+msgid "Effect for dynamic text"
+msgstr ""
+
+#: includes/customizer-functions.php:188
+msgid "Dynamic text"
+msgstr ""
+
+#. Author of the plugin
+#: includes/customizer-functions.php:189 includes/template-tags.php:55
+msgid "Awethemes"
+msgstr ""
+
+#: includes/customizer-functions.php:189 includes/template-tags.php:55
+msgid "Creative"
+msgstr ""
+
+#: includes/customizer-functions.php:203 includes/customizer-functions.php:269
+#: includes/customizer-functions.php:333
+msgid "Use customize style"
+msgstr ""
+
+#: includes/customizer-functions.php:210 includes/customizer-functions.php:276
+#: includes/customizer-functions.php:340
+msgid "Custom style"
+msgstr ""
+
+#: includes/customizer-functions.php:233 includes/customizer-functions.php:299
+#: includes/ctoolkit/inc/field/Typography.php:198
+msgid "Color"
+msgstr ""
+
+#: includes/customizer-functions.php:251
+msgid "Content"
+msgstr ""
+
+#: includes/customizer-functions.php:256
+msgid "Paragraph"
+msgstr ""
+
+#: includes/customizer-functions.php:257
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum "
+"ultricies augue vitae lobortis."
+msgstr ""
+
+#: includes/customizer-functions.php:316
+msgid "Button"
+msgstr ""
+
+#: includes/customizer-functions.php:321
+msgid "Button text"
+msgstr ""
+
+#: includes/customizer-functions.php:322 includes/template-tags.php:146
+msgid "Enter website"
+msgstr ""
+
+#: includes/customizer-functions.php:363
+msgid "Text color"
+msgstr ""
+
+#: includes/customizer-functions.php:374
+msgid "Text color hover"
+msgstr ""
+
+#: includes/customizer-functions.php:385
+msgid "Background color"
+msgstr ""
+
+#: includes/customizer-functions.php:396
+msgid "Background color hover"
+msgstr ""
+
+#: includes/customizer-functions.php:413
+msgid "Background"
+msgstr ""
+
+#: includes/customizer-functions.php:418
+msgid "Background type"
+msgstr ""
+
+#: includes/customizer-functions.php:421 includes/customizer-functions.php:432
+msgid "Solid color"
+msgstr ""
+
+#: includes/customizer-functions.php:422
+msgid "Backgound image"
+msgstr ""
+
+#: includes/customizer-functions.php:423
+msgid "Backgound slider images"
+msgstr ""
+
+#: includes/customizer-functions.php:424
+msgid "Backgound video"
+msgstr ""
+
+#: includes/customizer-functions.php:443
+msgid "Background image"
+msgstr ""
+
+#: includes/customizer-functions.php:452
+msgid "Background slider"
+msgstr ""
+
+#: includes/customizer-functions.php:456
+msgid "Add images to display background slider."
+msgstr ""
+
+#: includes/customizer-functions.php:462
+msgid "Slide"
+msgstr ""
+
+#: includes/customizer-functions.php:463
+msgid "Fade"
+msgstr ""
+
+#: includes/customizer-functions.php:466
+msgid "Slider effect"
+msgstr ""
+
+#: includes/customizer-functions.php:475
+msgid "Video url"
+msgstr ""
+
+#: includes/customizer-functions.php:479
+msgid "Enter an youtube link or a Vimeo link."
+msgstr ""
+
+#: includes/customizer-functions.php:485
+msgid "Video options"
+msgstr ""
+
+#: includes/customizer-functions.php:493
+msgid "Mute sound"
+msgstr ""
+
+#: includes/customizer-functions.php:503
+msgid "Auto play"
+msgstr ""
+
+#: includes/customizer-functions.php:519
+msgid "Additional JS"
+msgstr ""
+
+#: includes/customizer-functions.php:522
+msgid ""
+"Allows you to write Javascript code to footer of your website. Separate "
+"Javascript is saved for each of your themes. In the editing area the Tab key "
+"enters a tab character. To move below this area by pressing Tab, press the "
+"Esc key followed by the Tab key."
+msgstr ""
+
+#: includes/customizer-functions.php:527
+msgid ""
+"You can add your own Javascript code here.\n"
+"\n"
+"Click the help icon above to learn more."
+msgstr ""
+
+#: includes/customizer-functions.php:541
+msgid "Additional CSS"
+msgstr ""
+
+#: includes/customizer-functions.php:544
+msgid ""
+"CSS allows you to customize the appearance and layout of your site with code."
+" Separate CSS is saved for each of your themes. In the editing area the Tab "
+"key enters a tab character. To move below this area by pressing Tab, press "
+"the Esc key followed by the Tab key."
+msgstr ""
+
+#: includes/customizer-functions.php:549
+msgid ""
+"You can add your own Css code here.\n"
+"\n"
+"Click the help icon above to learn more."
+msgstr ""
+
+#: includes/template-tags.php:114
+msgid "Video "
+msgstr ""
+
+#: includes/template-tags.php:186
+msgid "Month"
+msgstr ""
+
+#: includes/template-tags.php:187
+msgid "Day"
+msgstr ""
+
+#: includes/template-tags.php:188
+msgid "Year"
+msgstr ""
+
+#: templates/splash-page.php:13
+msgid "Skip to content"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:230 includes/ctoolkit/inc/Fonts.php:231
+msgid "Ultra-Light 100"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:232
+msgid "Ultra-Light 100 Italic"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:233
+msgid "Light 200"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:234
+msgid "Light 200 Italic"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:235
+msgid "Book 300"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:236
+msgid "Book 300 Italic"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:237 includes/ctoolkit/inc/Fonts.php:238
+msgid "Normal 400"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:239
+msgid "Normal 400 Italic"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:240
+msgid "Medium 500"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:241
+msgid "Medium 500 Italic"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:242 includes/ctoolkit/inc/Fonts.php:243
+msgid "Semi-Bold 600"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:244
+msgid "Semi-Bold 600 Italic"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:245
+msgid "Bold 700"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:246
+msgid "Bold 700 Italic"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:247 includes/ctoolkit/inc/Fonts.php:248
+msgid "Extra-Bold 800"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:249
+msgid "Extra-Bold 800 Italic"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:250 includes/ctoolkit/inc/Fonts.php:251
+msgid "Ultra-Bold 900"
+msgstr ""
+
+#: includes/ctoolkit/inc/Fonts.php:252
+msgid "Ultra-Bold 900 Italic"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Autocomplete.php:140
+#, php-format
+msgid "Please enter %d or more characters"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Gallery.php:91
+#: includes/ctoolkit/inc/field/Multitext.php:104
+#: includes/ctoolkit/inc/field/Multitext.php:104
+msgid "Remove"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Gallery.php:101
+#: includes/ctoolkit/inc/field/Gallery.php:101
+msgid "Add images"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Icon_Picker.php:92
+msgid "No icon"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Link.php:91
+msgid "Select URL"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Link.php:93
+msgid "Link Text:"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Link.php:97
+msgid "URL:"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Multitext.php:94
+msgid "Add new"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Multitext.php:105
+#: includes/ctoolkit/inc/field/Multitext.php:105
+msgid "Short"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:128
+msgid "Font Family"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:134
+msgid "Variants"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:135
+msgid "Select Variants..."
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:140
+msgid "Subsets"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:141
+msgid "Select Subsets..."
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:148
+msgid "Light Height"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:150
+msgid "1.4em"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:157
+msgid "Font Size"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:159
+msgid "14px"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:165
+msgid "Letter Spacing"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:167
+msgid "1px"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:173
+msgid "Text Transform"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:177
+msgid "None"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:178
+msgid "Capitalize"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:179
+msgid "Uppercase"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:180
+msgid "Lowercase"
+msgstr ""
+
+#: includes/ctoolkit/inc/field/Typography.php:181
+msgid "Initial"
+msgstr ""
+
+#. Name of the plugin
+msgid "AweSplash - Just Splash Page"
+msgstr ""
+
+#. Description of the plugin
+msgid "A splash page for your WordPress site."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/awesplash/"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://awethemes.com/"
+msgstr ""

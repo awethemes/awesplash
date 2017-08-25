@@ -1,0 +1,61 @@
+=== AweSplash - Just Splash Page ===
+Donate link: http://awethemes.com
+Contributors: awethemes, tuanvu    
+Tags: splash page, splash screen, background video
+Requires at least: 4.3    
+Tested up to: 4.8    
+Stable tag: 1.0      
+License: GPLv3    
+License URI: http://www.gnu.org/licenses/gpl-3.0.html    
+
+A splash page for your WordPress site.
+
+== Description ==
+
+AweSplash is a simple plugin that lets you add a welcome page with background image, slide or video to your existing theme. You can use fixed, scrolling or type letter header. Its full responsive and support WP Customizer.
+
+[Demo here](http://demo.awethemes.com/awesplash)! After enter site, you can test admin customizer too.
+
+### Features:
+
+* Fully Responsive
+* Background color
+* Background Image
+* Background slider
+* Background Video (Youtube/Vimeo video)
+* Animated, type letter... heading
+* Custom font size and color
+* Custom button color, background
+* Works with every WordPress Theme
+* Support Google font
+
+
+== Installation ==
+
+1. Simply install as a normal WordPress plugin and activate.    
+2. Go to Appearance/Customizer
+3. On Customizer screen, click to AweSplash Settings Panel
+4. All customize sections are listed, hope you enjoy with it.
+
+
+== Frequently Asked Questions ==
+
+= Does this plugin change the default WordPress API? =
+
+No, AweSplash uses and extends the default WordPress methods and does not replace anything.
+
+
+== Screenshots ==
+
+1. Background image
+2. Background color
+
+== Upgrade Notice ==
+
+* Initial version
+
+
+== Changelog ==
+
+= 1.0 (July 2, 2017): =
+* Initial Public Release

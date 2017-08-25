@@ -1,0 +1,46 @@
+.ctoolkit-multitext{
+
+    .multitext-item{
+        &{
+            position: relative;
+            background: #f9f9f9;
+            padding: 3px 59px 3px 3px;
+            border: 1px solid #ddd;
+        }
+        a{
+            &{
+                display: block;
+                width: 24px;
+                height: 24px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                top: 3px;
+                right: 3px;
+                font-size: 0;
+                position: absolute;
+            }
+            &.remove{
+                background-image: url(../images/remove.png);
+                right: 31px;
+            }
+            &.short{
+                background-image: url(../images/move.png);
+                background-size: 12px 12px;
+                cursor: move;
+            }
+            &:hover{
+                background-color: #fdf7cb;
+            }
+        }
+
+    }
+    .bottom-row{
+        text-align: right;
+        margin-top: 3px;
+    }
+    a.addnew{
+        font-weight: bold;
+    }
+}
