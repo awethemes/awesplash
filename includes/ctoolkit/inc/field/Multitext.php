@@ -81,7 +81,7 @@ class Multitext extends \WP_Customize_Control {
 			<?php printf( '<input type="hidden" class="ctoolkit_value" value="%s" %s/>', $value, implode( ' ', $attrs ) ); ?>
 			<ul>
 				<?php
-				if ( count( $data ) ) {
+				if (!empty($data) && count( $data ) ) {
 					foreach ( $data as $val ) {
 						$this->field_item( $val );
 					}

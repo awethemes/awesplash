@@ -4,7 +4,7 @@
  * Plugin Name: AweSplash - Just Splash Page    
  * Plugin URI: https://wordpress.org/plugins/awesplash/    
  * Description: A splash page for your WordPress site.    
- * Version: 1.0    
+ * Version: 1.0.1    
  * Author: Awethemes    
  * Author URI: http://awethemes.com/    
  * License: GNU General Public License v3 or later
@@ -59,7 +59,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 		 * The single instance of the class.
 		 *
 		 * @var awesplash
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		protected static $_instance = null;
 
@@ -68,7 +68,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 		 *
 		 * Ensures only one instance of AweSplash is loaded or can be loaded.
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 * @static
 		 * @see awesplash()
 		 * @return AweSplash - Main instance.
@@ -82,7 +82,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 
 		/**
 		 * Call functions to WordPress hooks
-		 * @since 1.0
+		 * @since 1.0.0
 		 * @return void
 		 */
 		public function hook() {
@@ -130,7 +130,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 
 		/**
 		 * Render page
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function splashpage( $template ) {
 
@@ -181,7 +181,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 
 		/**
 		 * Bind JS handlers to instantly live-preview changes.
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function customize_controls_js() {
 			wp_enqueue_script( 'awesplash-customize-controls', AWESPLASH_URL . 'assets/js/customize-controls.js', array( 'customize-preview' ), AWESPLASH_VER, true );
@@ -190,7 +190,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 
 		/**
 		 * Bind JS handlers to instantly live-preview changes.
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function customize_preview_js() {
 			wp_enqueue_script( 'awesplash-customize-preview', AWESPLASH_URL . 'assets/js/customize-preview.js', array( 'customize-preview' ), AWESPLASH_VER, true );
@@ -199,7 +199,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 
 		/**
 		 * Register Splash page font url
-		 * @since 1.0
+		 * @since 1.0.0
 		 * @return string Font url
 		 */
 		public function font_url() {
@@ -229,7 +229,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 
 		/**
 		 * Register custom font url
-		 * @since 1.0
+		 * @since 1.0.0
 		 * @return string|bool Font url or False
 		 */
 		public function custom_font_url() {
@@ -256,7 +256,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 
 		/**
 		 * Register scripts and style for splash page
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function enqueue_scripts() {
 
@@ -282,7 +282,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 
 		/**
 		 * Include functions
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function includes() {
 			require AWESPLASH_DIR . 'includes/ctoolkit/ctoolkit.php';
@@ -301,12 +301,12 @@ if ( !class_exists( 'AweSplash' ) ) {
 		public function defined() {
 			define( 'AWESPLASH_URL', plugin_dir_url( __FILE__ ) );
 			define( 'AWESPLASH_DIR', plugin_dir_path( __FILE__ ) );
-			define( 'AWESPLASH_VER', '1.0' );
+			define( 'AWESPLASH_VER', '1.0.1' );
 		}
 
 		/**
 		 * Load Local files.
-		 * @since 1.0
+		 * @since 1.0.0
 		 * @return void
 		 */
 		public function load_plugin_textdomain() {
@@ -338,7 +338,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 
 		/**
 		 * Just use awesplash page style
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function remove_styles() {
 			if ( $this->is_allow() && !is_admin() ) {
@@ -359,7 +359,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 
 		/**
 		 * Just use awesplash page scripts
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function remove_scripts() {
 			if ( $this->is_allow() && !is_admin() ) {
@@ -436,7 +436,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 	 *
 	 * Returns the main instance of awesplash to prevent the need to use globals.
 	 *
-	 * @since  1.0
+	 * @since  1.0.0
 	 * @return awesplash
 	 */
 	function awesplash() {

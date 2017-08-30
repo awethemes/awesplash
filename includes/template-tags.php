@@ -5,7 +5,7 @@
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package AweSplash
- * @since 1.0
+ * @since 1.0.0
  */
 /**
  * Awesplash page template
@@ -14,7 +14,7 @@ if ( !function_exists( 'awesplash_template_heading_text_list' ) ):
 
 	/**
 	 * Template heading text list
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	function awesplash_template_heading_text_list( $value, $style ) {
 		if ( !empty( $value ) ) {
@@ -43,7 +43,7 @@ if ( !function_exists( 'awesplash_template_heading' ) ):
 
 	/**
 	 * Template heading
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	function awesplash_template_heading() {
 		$style = awesplash_sanitize_heading_effect( get_theme_mod( 'awesplash_heading_style' ) );
@@ -68,7 +68,7 @@ if ( !function_exists( 'awesplash_template_background' ) ):
 
 	/**
 	 * Template background
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	function awesplash_template_background() {
 
@@ -125,7 +125,7 @@ if ( !function_exists( 'awesplash_template_content' ) ):
 
 	/**
 	 * Display content discription template
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	function awesplash_template_content() {
 		echo '<div class="title__description">';
@@ -139,7 +139,7 @@ if ( !function_exists( 'awesplash_template_button' ) ):
 
 	/**
 	 * Display button template
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	function awesplash_template_button() {
 		//Options btn color: .btn-success | .btn-info | .btn-warning | .btn-danger | .btn-primary
@@ -153,7 +153,7 @@ if ( !function_exists( 'awesplash_template_opt' ) ):
 
 	/**
 	 * Display opt-in validation template
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	function awesplash_template_opt() {
 
@@ -171,7 +171,7 @@ if ( !function_exists( 'awesplash_template_age' ) ):
 
 	/**
 	 * Display template Age validation template
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	function awesplash_template_age() {
 		$now = new DateTime();
@@ -199,7 +199,7 @@ if ( !function_exists( 'awesplash_template_errors' ) ) {
 	/**
 	 * Display error on template
 	 * @param bool $single Display single message or list
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	function awesplash_template_errors( $single = false ) {
 		if ( !empty( $_SESSION['awesplash_form_errors'] ) && is_array( $_SESSION['awesplash_form_errors'] ) ) {
@@ -224,7 +224,7 @@ if ( !function_exists( 'awesplash_custom_css' ) ):
 
 	/**
 	 * Generate the CSS for the current custom color scheme.
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @return string Css
 	 */
 	function awesplash_custom_css() {
@@ -320,7 +320,7 @@ if ( !function_exists( 'awesplash_custom_js' ) ) {
 
 	/**
 	 * Display custom Javascript
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	function awesplash_custom_js() {
 		if ( $custom_js = get_theme_mod( 'awesplash_custom_js', '' ) ) {

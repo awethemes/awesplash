@@ -4,7 +4,7 @@
  * Handle frontend forms.
  *
  * @package AweSplash
- * @since 1.0
+ * @since 1.0.0
  */
 
 /**

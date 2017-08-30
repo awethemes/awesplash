@@ -4,13 +4,13 @@
  * Helper functions file
  *
  * @package AweSplash
- * @since 1.0
+ * @since 1.0.0
  */
 
 /**
  * Template file
  * 
- * @since 1.0
+ * @since 1.0.0
  */
 function awesplash_template( $slug, $data = array() ) {
 
@@ -24,7 +24,7 @@ function awesplash_template( $slug, $data = array() ) {
 /**
  * Get content of template file
  * 
- * @since 1.0
+ * @since 1.0.0
  */
 function awesplash_get_template( $slug, $data = array() ) {
 	ob_start();

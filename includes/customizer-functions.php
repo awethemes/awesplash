@@ -4,7 +4,7 @@
  * Add Customizer settings for this plugin
  *
  * @package AweSplash
- * @since 1.0
+ * @since 1.0.0
  */
 
 /**
