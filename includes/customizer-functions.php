@@ -325,7 +325,17 @@ function awesplash_customizer( $wp_customize ) {
 					'selector' => '.title__action',
 					'container_inclusive' => true,
 					'render_callback' => 'awesplash_template_button'
-				)
+				),
+				'sanitize_callback' => 'sanitize_text_field'
+			),
+			array(
+				'name' => 'awesplash_button_url',
+				'type' => 'text',
+				'heading' => esc_html__( 'Button url', 'awesplash' ),
+				'value' => '',
+				'transport' => 'refresh',
+				'desc' => esc_html__( 'Enter a redirect url or leave empty to use the default site link.', 'awesplash' ),
+				'sanitize_callback' => 'esc_url'
 			),
 			array(
 				'name' => 'awesplash_button_typo_enable',

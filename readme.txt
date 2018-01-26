@@ -1,10 +1,10 @@
 === AweSplash - Just Splash Page ===
 Donate link: http://awethemes.com
-Contributors: awethemes, tuanvu    
+Contributors: awethemes, wedesignwebuild    
 Tags: splash page, splash screen, background video
 Requires at least: 4.3    
-Tested up to: 4.8.1
-Stable tag: 1.0.1      
+Tested up to: 4.9
+Stable tag: 1.0.2      
 License: GPLv3    
 License URI: http://www.gnu.org/licenses/gpl-3.0.html    
 
@@ -57,10 +57,14 @@ No, AweSplash uses and extends the default WordPress methods and does not replac
 
 == Changelog ==
 
+### 1.0.2 (January 25, 2017)
+#### Added
+- Custom redirect url
+- Plugin action settings link
+
 ### 1.0.1 (August 30, 2017)
 #### Fixed
-
 - Dynamic text empty
 
 ### 1.0.0 (July 2, 2017)
-* Initial Public Release
+- Initial Public Release

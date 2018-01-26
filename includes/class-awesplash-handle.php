@@ -19,7 +19,7 @@ class AwesPlash_Handle {
 	public static function form_validate() {
 
 		if ( !empty( $_POST['awesplash_nonce'] ) ) {
-
+			
 			$error = array();
 
 			if ( wp_verify_nonce( $_POST['awesplash_nonce'], 'awesplash' ) ) {
@@ -50,11 +50,18 @@ class AwesPlash_Handle {
 			$_SESSION['awesplash_form_errors'] = $error;
 
 			if ( empty( $error ) ) {
+				
 				$expiration = absint( get_theme_mod( 'awesplash_expire_days', 30 ) );
 				$expiration = $expiration > 0 ? time() + (DAY_IN_SECONDS * $expiration) : 0;
 				setCookie( 'awesplash', 'yes', $expiration, '/' );
-				$actual_link = (isset( $_SERVER['HTTPS'] ) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-				wp_redirect( esc_url( $actual_link ) );
+
+				$custom_link = get_theme_mod( 'awesplash_button_url' );
+
+				if ( empty( $custom_link ) ) {
+					$custom_link = awesplash_get_current_url();
+				}
+
+				wp_redirect( esc_url( $custom_link ) );
 				exit;
 			}
 		}

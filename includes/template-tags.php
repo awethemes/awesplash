@@ -202,6 +202,7 @@ if ( !function_exists( 'awesplash_template_errors' ) ) {
 	 * @since 1.0.0
 	 */
 	function awesplash_template_errors( $single = false ) {
+		
 		if ( !empty( $_SESSION['awesplash_form_errors'] ) && is_array( $_SESSION['awesplash_form_errors'] ) ) {
 			$errors = $_SESSION['awesplash_form_errors'];
 
@@ -215,6 +216,8 @@ if ( !function_exists( 'awesplash_template_errors' ) ) {
 					break;
 				}
 			}
+			
+			unset($_SESSION['awesplash_form_errors']);
 		}
 	}
 

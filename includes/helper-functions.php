@@ -133,10 +133,9 @@ function awesplash_color_luminance( $hex, $percent ) {
 		$dec = min( max( 0, $dec + $dec * $percent ), 255 );
 		$new_hex .= str_pad( dechex( $dec ), 2, 0, STR_PAD_LEFT );
 	}
-	
+
 	return $new_hex;
 }
-
 
 /**
  * Sanitize heading effect
@@ -180,4 +179,16 @@ function awesplash_sanitize_background_slider_effect( $value ) {
 	}
 
 	return $value;
+}
+
+/**
+ * Get current url
+ * 
+ * @since 1.0.2
+ * 
+ * @return string URL
+ */
+function awesplash_get_current_url() {
+	global $wp;
+	return home_url( $wp->request );
 }

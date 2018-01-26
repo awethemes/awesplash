@@ -4,14 +4,14 @@
  * Plugin Name: AweSplash - Just Splash Page    
  * Plugin URI: https://wordpress.org/plugins/awesplash/    
  * Description: A splash page for your WordPress site.    
- * Version: 1.0.1    
+ * Version: 1.0.2    
  * Author: Awethemes    
  * Author URI: http://awethemes.com/    
  * License: GNU General Public License v3 or later
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
- * Requires at least: 4.0
- * Tested up to: 4.8
+ * Requires at least: 4.3
+ * Tested up to: 4.9
  * Text Domain: awesplash
  * Domain Path: /languages/
  *
@@ -39,19 +39,19 @@ if ( !class_exists( 'AweSplash' ) ) {
 		 * @return bool
 		 */
 		public function is_allow() {
-			// && is_admin() 
+			
 			if ( !$this->is_acitve ) {
 				return false;
 			}
 
-			if ( isset( $_COOKIE['awesplash'] ) && $_COOKIE['awesplash'] == 'yes' ) {
+			if ( isset( $_COOKIE['awesplash'] ) && sanitize_text_field( $_COOKIE['awesplash']) == 'yes' ) {
 				return false;
 			}
-
+			
 			if ( esc_attr( get_theme_mod( 'awesplash_display_type', '' ) ) == '' && !is_front_page() ) {
 				return false;
 			}
-
+			
 			return true;
 		}
 
@@ -91,8 +91,10 @@ if ( !class_exists( 'AweSplash' ) ) {
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 			add_action( 'customize_controls_print_scripts', array( $this, 'customize_controls_js' ) );
 			add_action( 'wp_ajax_awesplash_enable', array( $this, 'enable' ) );
+			add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'add_action_links' ) );
 
 			if ( $this->is_acitve ) {
+				
 				add_action( 'template_include', array( $this, 'splashpage' ) );
 				add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 				add_action( 'wp_print_styles', array( $this, 'remove_styles' ), 100 );
@@ -123,9 +125,12 @@ if ( !class_exists( 'AweSplash' ) ) {
 			}
 
 			$enable = absint( $_POST['enable'] );
+			
 			set_theme_mod( 'awesplash_enable', $enable );
 			setcookie( 'awesplash', '', time() - 3600, '/' );
+			
 			wp_send_json_success( $enable );
+			
 		}
 
 		/**
@@ -133,8 +138,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 		 * @since 1.0.0
 		 */
 		public function splashpage( $template ) {
-
-
+			
 			if ( !$this->is_allow() ) {
 				return $template;
 			}
@@ -142,13 +146,14 @@ if ( !class_exists( 'AweSplash' ) ) {
 			$no_validate = !get_theme_mod( 'awesplash_age_enable', 0 ) && !get_theme_mod( 'awesplash_opt_enable', 1 );
 
 			if ( !isset( $_COOKIE['awesplash'] ) && $no_validate && !is_customize_preview() ) {
-
+				
 				$expiration = time() + (DAY_IN_SECONDS * absint( get_theme_mod( 'awesplash_expire_days', 30 ) ));
 				setCookie( 'awesplash', 'viewed', $expiration, '/' );
-			} else if ( isset( $_COOKIE['awesplash'] ) && $_COOKIE['awesplash'] == 'viewed' && $no_validate ) {
+			} else if ( isset( $_COOKIE['awesplash'] ) && sanitize_text_field( $_COOKIE['awesplash']) == 'viewed' && $no_validate ) {
+				
 				$expiration = time() + (DAY_IN_SECONDS * absint( get_theme_mod( 'awesplash_expire_days', 30 ) ));
 				setCookie( 'awesplash', 'yes', $expiration, '/' );
-				$actual_link = (isset( $_SERVER['HTTPS'] ) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+				$actual_link = awesplash_get_current_url();
 				wp_redirect( esc_url( $actual_link ) );
 				exit;
 			}
@@ -207,7 +212,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 			$fonts_url = '';
 			$font_families = array();
 
-			$open_san = _x( 'on', 'Montserrat font', 'awesplash' );
+			$open_san = esc_html_x( 'on', 'Montserrat font', 'awesplash' );
 
 			if ( 'off' !== $open_san ) {
 				$font_families[] = 'Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i';
@@ -311,27 +316,39 @@ if ( !class_exists( 'AweSplash' ) ) {
 		 */
 		public function load_plugin_textdomain() {
 
-// Set filter for plugin's languages directory
+			/**
+			 * Set filter for plugin's languages directory
+			 */
 			$dir = AWESPLASH_DIR . 'languages/';
 			$dir = apply_filters( 'awesplash_languages_directory', $dir );
 
-// Traditional WordPress plugin locale filter
+			/**
+			 * Traditional WordPress plugin locale filter
+			 */
 			$locale = apply_filters( 'plugin_locale', get_locale(), 'awesplash' );
 			$mofile = sprintf( '%1$s-%2$s.mo', 'awesplash', $locale );
 
-// Setup paths to current locale file
+			/**
+			 * Setup paths to current locale file
+			 */
 			$mofile_local = $dir . $mofile;
 
 			$mofile_global = WP_LANG_DIR . '/awesplash/' . $mofile;
 
 			if ( file_exists( $mofile_global ) ) {
-				// Look in global /wp-content/languages/epl folder
+				/**
+				 * Look in global /wp-content/languages/awesplash
+				 */
 				load_textdomain( 'awesplash', $mofile_global );
 			} elseif ( file_exists( $mofile_local ) ) {
-				// Look in local /wp-content/plugins/awesplash/languages/ folder
+				/**
+				 * Look in local /wp-content/plugins/awesplash/languages/
+				 */
 				load_textdomain( 'awesplash', $mofile_local );
 			} else {
-				// Load the default language files
+				/**
+				 *  Load the default language files
+				 */
 				load_plugin_textdomain( 'awesplash', false, $dir );
 			}
 		}
@@ -427,6 +444,19 @@ if ( !class_exists( 'AweSplash' ) ) {
 					$wp_filter['wp_footer'][1000] = $save1000;
 				}
 			}
+		}
+
+		/**
+		 * Add setting link
+		 * @return array
+		 */
+		public function add_action_links( $links ) {
+
+			$plugin_links = array(
+				'page' => '<a href="' . esc_url( apply_filters( 'awesplash_settings_url', admin_url( 'customize.php' ) ) ) . '" aria-label="' . esc_attr__( 'Settings', 'awesplash' ) . '">' . esc_html__( 'Settings', 'awesplash' ) . '</a>',
+			);
+
+			return array_merge( $links, $plugin_links );
 		}
 
 	}
