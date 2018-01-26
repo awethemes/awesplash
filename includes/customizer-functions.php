@@ -261,7 +261,7 @@ function awesplash_customizer( $wp_customize ) {
 					'render_callback' => 'awesplash_template_content',
 					'container_inclusive' => true
 				),
-				'sanitize_callback' => 'esc_textarea',
+				'sanitize_callback' => 'wp_kses_post',
 			),
 			array(
 				'name' => 'awesplash_content_typo_enable',
@@ -446,6 +446,17 @@ function awesplash_customizer( $wp_customize ) {
 				),
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'sanitize_hex_color',
+			),
+			array(
+				'name' => 'awesplash_background_overlay_disable',
+				'type' => 'checkbox',
+				'heading' => esc_html__( 'Disable background overlay', 'awesplash' ),
+				'value' => 0,
+				'dependency' => array(
+					'awesplash_background_type' => array( 'values' => array('image','video') )
+				),
+				'transport' => 'refresh',
+				'sanitize_callback' => 'absint',
 			),
 			array(
 				'name' => 'awesplash_background_image',

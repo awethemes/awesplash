@@ -202,7 +202,7 @@ if ( !function_exists( 'awesplash_template_errors' ) ) {
 	 * @since 1.0.0
 	 */
 	function awesplash_template_errors( $single = false ) {
-		
+
 		if ( !empty( $_SESSION['awesplash_form_errors'] ) && is_array( $_SESSION['awesplash_form_errors'] ) ) {
 			$errors = $_SESSION['awesplash_form_errors'];
 
@@ -216,8 +216,8 @@ if ( !function_exists( 'awesplash_template_errors' ) ) {
 					break;
 				}
 			}
-			
-			unset($_SESSION['awesplash_form_errors']);
+
+			unset( $_SESSION['awesplash_form_errors'] );
 		}
 	}
 
@@ -329,6 +329,33 @@ if ( !function_exists( 'awesplash_custom_js' ) ) {
 		if ( $custom_js = get_theme_mod( 'awesplash_custom_js', '' ) ) {
 			printf( '<script type="text/javascript" id="custom-code-js">%s</script>', $custom_js );
 		}
+	}
+
+}
+
+
+if ( !function_exists( 'awesplash_get_section_class' ) ) {
+
+	/**
+	 * Generate section class
+	 * @since 1.0.2
+	 * 
+	 * @return string
+	 */
+	function awesplash_get_section_classes() {
+		
+		$cssClass = array(
+			'hero-section--' . esc_attr( get_theme_mod( 'awesplash_background_type', 'color' ) ),
+			'clearfix'
+		);
+		
+		if ( get_theme_mod( 'awesplash_background_overlay_disable', 0 ) == 0 ) {
+			$cssClass[] = 'hero-section--overlay';
+		}
+
+		$cssClass = implode( ' ', $cssClass );
+
+		return apply_filters( 'awesplash_get_section_classes', $cssClass );
 	}
 
 }

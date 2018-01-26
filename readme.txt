@@ -61,6 +61,8 @@ No, AweSplash uses and extends the default WordPress methods and does not replac
 #### Added
 - Custom redirect url
 - Plugin action settings link
+- Optional disable background video, image overlay
+- Support displaying html code in content paragraph
 
 ### 1.0.1 (August 30, 2017)
 #### Fixed
