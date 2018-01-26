@@ -1700,6 +1700,7 @@ h6, .h6 {
   position: relative;
   left: 0;
   top: 0;
+  height: 100vh;
   display: block;
 }
 
@@ -1721,6 +1722,7 @@ h6, .h6 {
   height: 100%;
   min-height: 1px;
   display: none;
+  object-fit: cover;
 }
 
 [dir="rtl"] .slick-slide {
