@@ -2092,7 +2092,7 @@ h6, .h6 {
   background-color: #e94a4a;
 }
 
-.hero-section--slider .hero-section__wrap::before {
+.hero-section--slider.hero-section--overlay .hero-section__wrap::before {
   content: "";
   display: block;
   background-color: rgba(0, 0, 0, 0.6);

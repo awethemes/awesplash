@@ -453,7 +453,7 @@ function awesplash_customizer( $wp_customize ) {
 				'heading' => esc_html__( 'Disable background overlay', 'awesplash' ),
 				'value' => 0,
 				'dependency' => array(
-					'awesplash_background_type' => array( 'values' => array('image','video') )
+					'awesplash_background_type' => array( 'values' => array( 'image', 'video', 'slider' ) )
 				),
 				'transport' => 'refresh',
 				'sanitize_callback' => 'absint',
