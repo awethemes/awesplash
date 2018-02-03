@@ -16,6 +16,8 @@ AweSplash is a simple plugin that lets you add a welcome page with background im
 
 [Demo here](http://demo.awethemes.com/awesplash)! After enter site, you can test admin customizer too.
 
+HTML version is available [here](http://awe7.com/freebies/awesplash-free-html-splash-page)
+
 ### Features:
 
 * Fully Responsive
