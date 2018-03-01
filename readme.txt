@@ -59,6 +59,10 @@ No, AweSplash uses and extends the default WordPress methods and does not replac
 
 == Changelog ==
 
+## 1.0.3 (March 1, 2018)
+#### Fixed
+- Call js/css when the plugin page was shown
+
 ### 1.0.2 (January 25, 2017)
 #### Added
 - Custom redirect url

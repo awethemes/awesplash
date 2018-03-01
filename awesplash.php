@@ -264,6 +264,10 @@ if ( !class_exists( 'AweSplash' ) ) {
 		 * @since 1.0.0
 		 */
 		public function enqueue_scripts() {
+			
+			if ( !$this->is_allow() ) {
+				return;
+			}
 
 			wp_enqueue_style( 'awesplash-fonts', $this->font_url(), array(), null );
 
