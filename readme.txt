@@ -1,12 +1,12 @@
 === AweSplash - Just Splash Page ===
 Donate link: http://awethemes.com
-Contributors: awethemes, wedesignwebuild    
+Contributors: awethemes, wedesignwebuild
 Tags: splash page, splash screen, background video
-Requires at least: 4.3    
+Requires at least: 4.3
 Tested up to: 4.9
-Stable tag: 1.0.2      
-License: GPLv3    
-License URI: http://www.gnu.org/licenses/gpl-3.0.html    
+Stable tag: 1.0.3
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 A splash page for your WordPress site.
 
