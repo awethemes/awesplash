@@ -4,7 +4,7 @@ Contributors: awethemes, wedesignwebuild
 Tags: splash page, splash screen, background video
 Requires at least: 4.3
 Tested up to: 4.9
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -58,6 +58,10 @@ No, AweSplash uses and extends the default WordPress methods and does not replac
 
 
 == Changelog ==
+
+## 1.0.4 (May 15, 2018)
+#### Add    
+- Add auto redirect
 
 ## 1.0.3 (March 1, 2018)
 #### Fixed

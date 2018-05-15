@@ -39,19 +39,19 @@ if ( !class_exists( 'AweSplash' ) ) {
 		 * @return bool
 		 */
 		public function is_allow() {
-			
+
 			if ( !$this->is_acitve ) {
 				return false;
 			}
 
-			if ( isset( $_COOKIE['awesplash'] ) && sanitize_text_field( $_COOKIE['awesplash']) == 'yes' ) {
+			if ( isset( $_COOKIE['awesplash'] ) && sanitize_text_field( $_COOKIE['awesplash'] ) == 'yes' ) {
 				return false;
 			}
-			
+
 			if ( esc_attr( get_theme_mod( 'awesplash_display_type', '' ) ) == '' && !is_front_page() ) {
 				return false;
 			}
-			
+
 			return true;
 		}
 
@@ -94,7 +94,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 			add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'add_action_links' ) );
 
 			if ( $this->is_acitve ) {
-				
+
 				add_action( 'template_include', array( $this, 'splashpage' ) );
 				add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 				add_action( 'wp_print_styles', array( $this, 'remove_styles' ), 100 );
@@ -125,12 +125,11 @@ if ( !class_exists( 'AweSplash' ) ) {
 			}
 
 			$enable = absint( $_POST['enable'] );
-			
+
 			set_theme_mod( 'awesplash_enable', $enable );
 			setcookie( 'awesplash', '', time() - 3600, '/' );
-			
+
 			wp_send_json_success( $enable );
-			
 		}
 
 		/**
@@ -138,7 +137,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 		 * @since 1.0.0
 		 */
 		public function splashpage( $template ) {
-			
+
 			if ( !$this->is_allow() ) {
 				return $template;
 			}
@@ -146,11 +145,11 @@ if ( !class_exists( 'AweSplash' ) ) {
 			$no_validate = !get_theme_mod( 'awesplash_age_enable', 0 ) && !get_theme_mod( 'awesplash_opt_enable', 1 );
 
 			if ( !isset( $_COOKIE['awesplash'] ) && $no_validate && !is_customize_preview() ) {
-				
+
 				$expiration = time() + (DAY_IN_SECONDS * absint( get_theme_mod( 'awesplash_expire_days', 30 ) ));
 				setCookie( 'awesplash', 'viewed', $expiration, '/' );
-			} else if ( isset( $_COOKIE['awesplash'] ) && sanitize_text_field( $_COOKIE['awesplash']) == 'viewed' && $no_validate ) {
-				
+			} else if ( isset( $_COOKIE['awesplash'] ) && sanitize_text_field( $_COOKIE['awesplash'] ) == 'viewed' && $no_validate ) {
+
 				$expiration = time() + (DAY_IN_SECONDS * absint( get_theme_mod( 'awesplash_expire_days', 30 ) ));
 				setCookie( 'awesplash', 'yes', $expiration, '/' );
 				$actual_link = awesplash_get_current_url();
@@ -169,7 +168,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 		}
 
 		public function local_var() {
-			return array(
+			$arr = array(
 				'background_color' => sanitize_hex_color( get_theme_mod( 'awesplash_background_color' ) ),
 				'heading_color' => sanitize_hex_color( get_theme_mod( 'awesplash_heading_color' ) ),
 				'content_color' => sanitize_hex_color( get_theme_mod( 'awesplash_content_color' ) ),
@@ -180,8 +179,10 @@ if ( !class_exists( 'AweSplash' ) ) {
 				'confirm_on' => __( 'You need to reload the page to show splash page. Press OK to reload.', 'awesplash' ),
 				'confirm_off' => __( 'You need to reload the page to turn off splash page. Press OK to reload.', 'awesplash' ),
 				'nonce' => wp_create_nonce( 'awesplash_enable' ),
-				'ajaxurl' => admin_url( 'admin-ajax.php' )
+				'ajaxurl' => admin_url( 'admin-ajax.php' ),
 			);
+
+			return apply_filters( 'awesplash_local_var', $arr );
 		}
 
 		/**
@@ -264,7 +265,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 		 * @since 1.0.0
 		 */
 		public function enqueue_scripts() {
-			
+
 			if ( !$this->is_allow() ) {
 				return;
 			}
@@ -287,6 +288,11 @@ if ( !class_exists( 'AweSplash' ) ) {
 			if ( $custom_css = get_theme_mod( 'awesplash_custom_css', '' ) ) {
 				wp_add_inline_style( 'awesplash-fonts', $custom_css );
 			}
+
+			wp_localize_script( 'awesplash-main', 'awesplash', array(
+				'redirect_url' => sanitize_text_field( get_theme_mod( 'awesplash_redirect_url' ) ),
+				'redirect_time' => absint( get_theme_mod( 'awesplash_redirect_time' ) )
+			) );
 		}
 
 		/**
@@ -310,7 +316,7 @@ if ( !class_exists( 'AweSplash' ) ) {
 		public function defined() {
 			define( 'AWESPLASH_URL', plugin_dir_url( __FILE__ ) );
 			define( 'AWESPLASH_DIR', plugin_dir_path( __FILE__ ) );
-			define( 'AWESPLASH_VER', '1.0.1' );
+			define( 'AWESPLASH_VER', '1.0.4' );
 		}
 
 		/**

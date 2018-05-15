@@ -531,6 +531,28 @@ function awesplash_customizer( $wp_customize ) {
 		)
 	) );
 
+	/**
+	 * Auto Redirect
+	 */
+	$panel->add_section( array(
+		'id' => 'awesplash_redirect_settings',
+		'heading' => esc_html__( 'Auto Redirect', 'awesplash' ),
+		'fields' => array(
+			array(
+				'name' => 'awesplash_redirect_url',
+				'type' => 'text',
+				'heading' => esc_html__( 'Redirect URL', 'awesplash' ),
+				'value' => '',
+				'sanitize_callback' => 'sanitize_text_field',
+			),
+			array(
+				'name' => 'awesplash_redirect_time',
+				'type' => 'text',
+				'heading' => esc_html__( 'Redirect Delay time', 'awesplash' ),
+				'value' => '',
+				'sanitize_callback' => 'sanitize_text_field',
+			),
+) ) );
 
 	/**
 	 * Custom JS
